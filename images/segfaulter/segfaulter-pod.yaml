@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: segfaulter
+spec:
+  containers:
+  - name: segfaulter
+    image: quay.io/robbmanes/segfaulter:v1
