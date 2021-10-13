@@ -4,3 +4,4 @@ A collection of applications I've containerized or written to be executed in a c
 ## Container Images
 - [iopl-test](images/iopl-test) - runs `iopl` within a container, useful for verifying container permissions.
 - [segfaulter](images/segfaulter) - intentionally causes a segfault, useful for testing coredump collection.
+- [vmovsd-checker](images/vmovsd-checker) - runs the `vmovsd` x86_64 operation within a container, useful for testing CPU compatibility.
