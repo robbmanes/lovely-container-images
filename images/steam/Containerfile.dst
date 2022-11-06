@@ -1,0 +1,9 @@
+FROM localhost/steam-base:latest
+RUN mkdir -p /home/steam/dst/{conf,server} && \
+    /home/steam/steamcmd/steamcmd.sh \
+      "+force_install_dir /home/steam/steamapps/DST" \
+      "+login anonymous" \
+      "+app_update 343050 validate" \
+      "+quit"
+COPY configs/dst.ini /home/steam/dst/config
+ENTRYPOINT ["/home/steam/steamapps/DST/bin/dontstarve_dedicated_server_nullrenderer", "-conf_dir", "/home/steam/dst/conf", "-persistent_storage_root", "/home/steam/dst/server"]
